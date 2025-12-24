@@ -1,34 +1,101 @@
-MIT License
+Bank Management System
+A console-based bank management system built in C++ that provides essential banking operations including account creation, deposits, withdrawals, and account management with secure authentication.
 
-Copyright (c) 2025 Riya Nimesh Gosalia
+Features
+Secure Login System: Password-protected access with multiple authentication attempts
+Account Management: Create and manage bank accounts (Savings/Current)
+Transaction Operations:
+Deposit funds
+Withdraw funds (with minimum balance check)
+Account Viewing:
+Display all accounts
+View specific account details
+Filter accounts by balance criteria
+Balance Filters:
+View accounts with balance > ₹2,00,000
+View dormant accounts (balance < ₹1,000)
+Data Persistence: File-based storage using binary files
+Prerequisites
+C++ Compiler (GCC, MinGW, or Visual Studio)
+Windows OS (uses conio.h for password masking)
+Basic understanding of banking operations
+Installation
+Clone the repository:
+bash
+git clone https://github.com/yourusername/bank-management-system.git
+cd bank-management-system
+Compile the program:
+bash
+g++ "Bank Management System.cpp" -o BankSystem.exe
+Run the executable:
+bash
+./BankSystem.exe
+Usage
+Login Credentials
+Username: admin
+Password: admin123
+Menu Options
+Create Account: Register a new bank account with personal details
+Display All Accounts: View all registered accounts
+Display Specific Account: Search and view a particular account
+Withdraw: Withdraw funds from an account (minimum balance: ₹1,000)
+Deposit: Deposit funds into an account
+High Balance Accounts: View accounts with balance > ₹2,00,000
+Dormant Accounts: View accounts with balance < ₹1,000
+Exit: Close the application
+Account Types
+S: Savings Account
+C: Current Account
+Technical Details
+Data Storage
+Accounts are stored in Bank.dat binary file
+Uses file stream operations for CRUD functionality
+Data persists between program sessions
+Security Features
+Password masking during input
+Maximum 3 login attempts
+Password confirmation requirement
+Minimum Balance Policy
+Accounts must maintain a minimum balance of ₹1,000
+Withdrawals are restricted if they breach this limit
+Project Structure
+bank-management-system/
+│
+├── Bank Management System.cpp    # Main source code
+├── Bank.dat                       # Binary data file (auto-generated)
+├── README.md                      # Project documentation
+├── LICENSE                        # MIT License
+└── .gitignore                     # Git ignore rules
+Limitations
+Single-user system (no concurrent access)
+Windows-specific (uses conio.h)
+No account deletion functionality
+Basic security implementation
+No transaction history tracking
+Future Enhancements
+Multi-user support with role-based access
+Cross-platform compatibility
+Account deletion and modification
+Transaction history and statements
+Interest calculation for savings accounts
+Password encryption
+GUI interface
+Database integration (MySQL/SQLite)
+Contributing
+Contributions are welcome! Please follow these steps:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Fork the repository
+Create a feature branch (git checkout -b feature/AmazingFeature)
+Commit your changes (git commit -m 'Add some AmazingFeature')
+Push to the branch (git push origin feature/AmazingFeature)
+Open a Pull Request
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Acknowledgments
+Built as an educational project to demonstrate file handling and OOP concepts in C++
+Inspired by real-world banking systems
+Contact
+For questions or suggestions, please open an issue in the repository.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-About This License
-The MIT License is a permissive open-source license that allows:
-
-✅ Commercial use
-✅ Modification
-✅ Distribution
-✅ Private use
-The only requirement is that the license and copyright notice must be included with the software.
-
-Disclaimer
-This software is provided for educational purposes. It should not be used for actual banking operations without significant security enhancements and proper testing. The authors are not responsible for any misuse or damages arising from the use of this software.
-
+Note: This is an educational project and should not be used for actual banking operations without significant security enhancements.
